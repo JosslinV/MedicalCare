@@ -1,6 +1,25 @@
 <?php require('../model/patientsModel.php');
 
-$patients = requestPatients($linkpdo); ?>
+if(!isset($_POST["submit"])){
+  $patients = requestPatients($linkpdo);
+}
+if(!empty($_POST["submit"])){
+  if(!empty($_POST["nom"]) || !empty($_POST["prenom"])){
+    $patients = requestPatientsSpecifique($linkpdo,$_POST["nom"],$_POST["prenom"]);
+  } else {
+    $patients = requestPatients($linkpdo);
+    echo '<h3>Recherche incorrecte</h3>';
+  }
+}?>
+
+<form action="./patientList.php" method="post">
+  Nom:
+  <input type="text" name="nom">
+  Prenom:
+  <input type="text" name="prenom">
+  <input type="submit" name="submit" value="Rechercher">
+</form>
+
 
 <table>
   <tr>
@@ -15,8 +34,9 @@ $patients = requestPatients($linkpdo); ?>
     <th>Num sécurité sociale</th>
     <th>Médecin traitant</th>
   </tr>
-<?php foreach($patients as $pat){ ?>
-
+<?php
+foreach($patients as $pat){
+?>
   <tr>
     <td><?php echo $pat["civilite"] ?></td>
     <td><?php echo $pat["nom"] ?></td>
@@ -30,9 +50,7 @@ $patients = requestPatients($linkpdo); ?>
     <td><?php echo $pat["MedecinReferent"] ?></td>
   </tr>
 
-
 <?php
 }
 ?>
-
 </table>
