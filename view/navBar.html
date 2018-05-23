@@ -3,12 +3,11 @@
 
   <head>
       <style type="text/css">
-        header{  height: 100px;  width: 102%;   margin-left: -9px; background-color: #6ea3b4;  }
-        ul{   position: fixed;   margin-top: 3%;   width: 110%;  }
+        header{  position: fixed; height: 100px;  width: 102%;   margin-left: -9px; margin-top: -20px; background-color: #6ea3b4;  }
+        menu{}
+        ul{         width: 110%;  }
         #menu > li {	display:inline-block;	padding-left: 7%;}
-        #logo {
-          padding-left: 80%;
-        }
+        #logo { padding-left: 70%; }
         a:link {  color: #363689;}
         a:visited {  color: #2A374E;}
         a:hover {  color: darkgrey;}
@@ -17,13 +16,14 @@
   </head>
   <header>
       <nav>
-      	<div >
+
       		<ul id="menu">
       			<li><a href="./patientList.php"> PATIENTS </a></li>
 
       			<li><a href="./medecinList.php"> MEDECINS </a></li>
+            <li><img id = "logo" src="../view/logoNav.png" ></li>
       	  </ul>
-            <img id = "logo" src="../view/logoNav.png" >
-      	</div>
+
+
       </nav>
   </header>

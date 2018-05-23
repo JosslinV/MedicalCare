@@ -1,8 +1,4 @@
 
-
-<?php require('../view/style.html');  ?>
-
-
 <form id="newPatient" class="form-horizontal">
 	<fieldset>
 

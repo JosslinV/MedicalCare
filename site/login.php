@@ -7,42 +7,43 @@
 
   </head>
   <body>
-    <h1> Bienvenue chez Medical Care ! </h1>
+    <main>
+      <h1> Bienvenue chez Medical Care ! </h1>
 
-    <form class="form-horizontal">
-  			<fieldset>
+      <form class="form-horizontal">
+    			<fieldset>
 
-  			<!-- Form Name -->
-  			<legend> Connectez vous à votre compte </legend>
+    			<!-- Form Name -->
+    			<legend> Connectez vous à votre compte </legend>
 
-  			<!-- Text input-->
-  			<div class="form-group">
-  			  <label class="col-md-2 control-label" for="login"> Login </label>
-  			  <div class="col-md-2">
-  			  	<input id="login" name="login" placeholder="login" class="form-control input-md" type="text">
+    			<!-- Text input-->
+    			<div class="form-group">
+    			  <label class="col-md-2 control-label" for="login"> Login </label>
+    			  <div class="col-md-2">
+    			  	<input id="login" name="login" placeholder="login" class="form-control input-md" type="text">
 
-  			  </div>
-  			</div>
+    			  </div>
+    			</div>
 
-  			<!-- Text input-->
-  			<div class="form-group">
-  			  <label class="col-md-2 control-label" for="mdp">Mot de passe</label>
-  			  <div class="col-md-2">
-  			  <input id="mdp" name="mdp" placeholder="*************" class="form-control input-md" type="text">
+    			<!-- Text input-->
+    			<div class="form-group">
+    			  <label class="col-md-2 control-label" for="mdp">Mot de passe</label>
+    			  <div class="col-md-2">
+    			  <input id="mdp" name="mdp" placeholder="*************" class="form-control input-md" type="text">
 
-  			  </div>
-  			</div>
+    			  </div>
+    			</div>
 
-        //ajouter bouton
+          <!-- Button -->
+        	<div class="center-block">
+        		<div class="col-md-2">
+        		<button type="button" class="btn btn-success btn-lg btn-block"> se connecter </button>
 
-
-
-
-
-  			</fieldset>
-  </form>
-
-
+        		</div>
+        	</div>
+    			</fieldset>
+    </form>
+  </main>
   </body>
 
 

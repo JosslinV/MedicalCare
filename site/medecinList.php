@@ -9,8 +9,9 @@
 
   <body>
       <?php require('../view/navBar.html'); ?>
-
-      <h1> Rechercher un Medecin : </h1>
-      <?php require('../view/medecinTab.php'); ?>
+      <main>
+        <h1> Rechercher un Medecin : </h1>
+        <?php require('../view/medecinTab.php'); ?>
+      </main>
   </body>
 </html>

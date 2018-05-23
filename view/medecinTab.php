@@ -11,35 +11,36 @@ if(!empty($_POST["submit"])){
     echo '<h3>Recherche incorrecte</h3>';
   }
 }?>
+<main>
+  <form action="./medecinList.php" method="post">
+    Nom:
+    <input type="text" name="nom">
+    Prenom:
+    <input type="text" name="prenom">
+    <input type="submit" name="submit" value="Rechercher">
+  </form>
 
-<form action="./medecinList.php" method="post">
-  Nom:
-  <input type="text" name="nom">
-  Prenom:
-  <input type="text" name="prenom">
-  <input type="submit" name="submit" value="Rechercher">
-</form>
 
 
+  <h2> Liste des medecins : </h2>
 
-<h2> Liste des medecins : </h2>
+  <table>
+    <tr>
+      <th>Civilité</th>
+      <th>Nom</th>
+      <th>Prénom</th>
+    </tr>
+  <?php
+  foreach($patients as $pat){
+  ?>
+    <tr>
+      <td><?php echo $pat["civilite"] ?></td>
+      <td><?php echo $pat["nom"] ?></td>
+      <td><?php echo $pat["prenom"] ?></td>
+    </tr>
 
-<table>
-  <tr>
-    <th>Civilité</th>
-    <th>Nom</th>
-    <th>Prénom</th>
-  </tr>
-<?php
-foreach($patients as $pat){
-?>
-  <tr>
-    <td><?php echo $pat["civilite"] ?></td>
-    <td><?php echo $pat["nom"] ?></td>
-    <td><?php echo $pat["prenom"] ?></td>
-  </tr>
-
-<?php
-}
-?>
-</table>
+  <?php
+  }
+  ?>
+  </table>
+</main>
