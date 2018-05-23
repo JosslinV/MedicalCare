@@ -1,5 +1,3 @@
-<?php include("navBar.html"); ?>
-
 <?php require('../model/patientsModel.php');
 
 if(!isset($_POST["submit"])){
@@ -21,8 +19,6 @@ if(!empty($_POST["submit"])){
   <input type="text" name="prenom">
   <input type="submit" name="submit" value="Rechercher">
 </form>
-
-
 
 <table>
   <tr>
