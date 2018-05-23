@@ -1,4 +1,3 @@
-<?php include("navBar.html"); ?>
 
 <?php require('../model/patientsModel.php');
 
@@ -23,6 +22,7 @@ if(!empty($_POST["submit"])){
 </form>
 
 
+<h2> Liste des patients : </h2>
 
 <table>
   <tr>
