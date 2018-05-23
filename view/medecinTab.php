@@ -1,3 +1,4 @@
+<?php include("navBar.html"); ?>
 <?php require('../model/medecinsModel.php');
 
 if(!isset($_POST["submit"])){
@@ -21,7 +22,7 @@ if(!empty($_POST["submit"])){
 </form>
 
 
-<?php include("navBar.html"); ?>
+
 
 
 <table>

@@ -6,7 +6,6 @@
   </head>
 
   <body>
-      <?php require('../view/navBar.html'); ?>
       <?php require('../view/patientTab.php'); ?>
   </body>
 </html>
