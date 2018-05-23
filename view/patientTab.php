@@ -2,6 +2,7 @@
 
 $patients = requestPatients($linkpdo); ?>
 
+<?php include("navBar.html"); ?>
 <table>
   <tr>
     <th>Civilité</th>
