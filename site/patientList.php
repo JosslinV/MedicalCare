@@ -6,7 +6,10 @@
   </head>
 
   <body>
+    <header>
       <?php require('../view/navBar.html'); ?>
+      <h1> Rechercher un Patient : </h1>
+
       <?php require('../view/patientTab.php'); ?>
       <?php require('../view/newPatient.php'); ?>
   </body>
