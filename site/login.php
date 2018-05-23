@@ -3,7 +3,7 @@
   <head>
     <meta charset ="UTF-8" />
     <title>  Page de connection </title>
-    <?php require('../view/stylebootstrap.html');  ?>
+    <?php require('../view/style.html');  ?>
 
   </head>
   <body>
@@ -33,7 +33,7 @@
   			  </div>
   			</div>
 
-        
+        //ajouter bouton
 
 
 

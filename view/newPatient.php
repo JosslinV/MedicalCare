@@ -1,6 +1,6 @@
 <button onclick="toggleForm()">Ajouter un patient</button>
 
-<?php require('furnitures/formulaire.html')?>
+<?php require('furnitures/formulaire.php')?>
 
 <script>
   function toggleForm(){
