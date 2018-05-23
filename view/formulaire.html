@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang ="fr">
+	<head>
+		<meta charset = "UTF-8" />
+		<title> Nouveau Patient </title>
+		<link rel="stylesheet" type = "text/css" >
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<style type="text/css">
+			body {
+				background-color: lightblue;
+			}
+
+
+		</style>
+	</head>
+	<body>
+
+	<form class="form-horizontal">
+			<fieldset>
+
+			<!-- Form Name -->
+			<legend>Nouveau Patient </legend>
+
+			<!-- Text input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="numSecu">N° SS</label>
+			  <div class="col-md-4">
+			  	<input id="numSecu" name="numSecu" placeholder="num de sécurité sociale" class="form-control input-md" type="text">
+
+			  </div>
+			</div>
+
+			<!-- Button Drop Down -->
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="médecinref">Médecin traitant</label>
+			  <div class="col-md-4">
+			    <div class="input-group">
+			      <input id="médecinref" name="médecinref" class="form-control" placeholder="médecin traitant" type="text">
+			      <div class="input-group-btn">
+			        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+
+			          <span class="caret"></span>
+			        </button>
+			        <ul class="dropdown-menu pull-right">
+			          <li><a href="#">M. Rodriguez</a></li>
+			          <li><a href="#">M. Saussine</a></li>
+			          <li><a href="#">...</a></li>
+			          <li><a href="#">Option three</a></li>
+			        </ul>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+
+			<!-- Button Drop Down -->
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="buttondropdown">Civillité</label>
+			  <div class="col-md-2">
+			    <div class="input-group">
+			      <input id="buttondropdown" name="buttondropdown" class="form-control" placeholder="M." type="text">
+			      <div class="input-group-btn">
+			        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+
+			          <span class="caret"></span>
+			        </button>
+			        <ul class="dropdown-menu pull-right">
+			          <li><a href="#">M.</a></li>
+			          <li><a href="#">Mme.</a></li>
+			          <li><a href="#">Melle</a></li>
+			          <li><a href="#">Option three</a></li>
+			        </ul>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="Nom du Patient">Nom</label>
+			  <div class="col-md-4">
+			  <input id="Nom du Patient" name="Nom du Patient" placeholder="Nom " class="form-control input-md" required="" type="text">
+
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="Prénom du Patient">Prénom</label>
+			  <div class="col-md-4">
+			  <input id="Prénom du Patient" name="Prénom du Patient" placeholder="Prénom " class="form-control input-md" required="" type="text">
+
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="AdresseVoie1">Adresse</label>
+			  <div class="col-md-5">
+			  <input id="AdresseVoie1" name="AdresseVoie1" placeholder="n° de la voie, nom de la voie ..." class="form-control input-md" type="text">
+
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="AdresseVoie2"></label>
+			  <div class="col-md-5">
+			  <input id="AdresseVoie2" name="AdresseVoie2" placeholder="étage, appartement, résidence, ..." class="form-control input-md" type="text">
+
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="cp">Code Postal</label>
+			  <div class="col-md-2">
+			  <input id="cp" name="cp" placeholder="XXXXX" class="form-control input-md" type="text">
+
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="ville">Ville</label>
+			  <div class="col-md-4">
+			  <input id="ville" name="ville" placeholder="ville" class="form-control input-md" type="text">
+
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="DateNaissance">Date de Naissance</label>
+			  <div class="col-md-4">
+			  <input id="DateNaissance" name="DateNaissance" placeholder="XX/XX/XXXX" class="form-control input-md" type="text">
+
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="villeNaissance">Lieu de Naissance</label>
+			  <div class="col-md-4">
+			  <input id="villeNaissance" name="villeNaissance" placeholder="ville de naissance" class="form-control input-md" type="text">
+
+			  </div>
+			</div>
+
+			</fieldset>
+</form>
+</body>
+
+</html

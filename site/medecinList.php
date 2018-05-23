@@ -3,6 +3,8 @@
   <head>
       <meta charset="utf-8">
       <title>Medical Care - médecins</title>
+      <?php require('../view/stylebootstrap.html');  ?>
+
   </head>
 
   <body>
