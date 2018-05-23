@@ -21,6 +21,7 @@ if(!empty($_POST["submit"])){
 </form>
 
 
+<?php include("navBar.html"); ?>
 <table>
   <tr>
     <th>Civilité</th>

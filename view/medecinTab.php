@@ -20,6 +20,10 @@ if(!empty($_POST["submit"])){
   <input type="submit" name="submit" value="Rechercher">
 </form>
 
+
+<?php include("navBar.html"); ?>
+
+
 <table>
   <tr>
     <th>Civilité</th>
