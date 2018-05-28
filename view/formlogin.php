@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr" >
-  <head>
-    <meta charset ="UTF-8" />
-    <title>  Page de connection </title>
-    <?php require('../css/style.html');  ?>
 
-  </head>
-  <body>
-    <main>
-      <h1> Bienvenue chez Medical Care ! </h1>
 
       <form class="form-horizontal">
     			<fieldset>
@@ -44,8 +34,3 @@
         	</div>
     			</fieldset>
     </form>
-  </main>
-  </body>
-
-
-</html>
