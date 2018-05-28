@@ -1,5 +1,5 @@
-
-<form id="newMedecin" class="form-horizontal">
+<link rel="stylesheet" type="text/css" href="../css/form.css">
+<form id="newMedecin" class="form-horizontal" method="post" action="../database/insertMedecin.php">
 	<fieldset>
 
 	<!-- Form Name -->
@@ -17,7 +17,7 @@
 	  <label class="col-md-4 control-label" for="buttondropdown">Civillité</label>
 	  <div class="col-md-2">
 	    <div class="input-group">
-	      <input id="buttondropdown" name="buttondropdown" class="form-control" placeholder="M." type="text">
+	      <input id="buttondropdown" name="civilite" class="form-control" placeholder="M." type="text">
 	      <div class="input-group-btn">
 	        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 
@@ -38,7 +38,7 @@
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="Nom du médecin">Nom</label>
 	  <div class="col-md-4">
-	  <input id="Nom du médecin" name="Nom du médecin" placeholder="Nom " class="form-control input-md" required="" type="text">
+	  <input id="Nom du médecin" name="nom" placeholder="Nom " class="form-control input-md" required="" type="text">
 
 	  </div>
 	</div>
@@ -47,7 +47,7 @@
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="Prénom du médecin">Prénom</label>
 	  <div class="col-md-4">
-	  <input id="Prénom du médecin" name="Prénom du médecin" placeholder="Prénom " class="form-control input-md" required="" type="text">
+	  <input id="Prénom du médecin" name="prenom" placeholder="Prénom " class="form-control input-md" required="" type="text">
 
 	  </div>
 	</div>
@@ -55,7 +55,7 @@
 	<!-- Button -->
 	<div class="center-block">
 		<div class="col-md-4">
-		<button type="button" class="btn btn-success btn-lg btn-block">Ajouter le médecin</button>
+		<button type="submit" class="btn btn-success btn-lg btn-block">Ajouter le médecin</button>
 
 		</div>
 	</div>

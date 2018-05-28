@@ -10,3 +10,16 @@
   padding-bottom: 5px;
   margin-bottom:5px;
 }
+
+#newMedecin {
+  background-color: gray;
+  position:absolute;
+  top: 80px;
+  left: 25%;
+  margin: auto;
+  z-index: 1;
+  width: 720px;
+  display: none;
+  padding-bottom: 5px;
+  margin-bottom:5px;
+}
