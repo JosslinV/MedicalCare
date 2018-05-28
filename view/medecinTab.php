@@ -24,7 +24,7 @@ if(!empty($_POST["submit"])){
 
   <h2> Liste des medecins : </h2>
 
-  <table>
+  <table class="table">
     <tr>
       <th>Civilité</th>
       <th>Nom</th>

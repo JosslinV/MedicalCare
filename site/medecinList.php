@@ -3,7 +3,7 @@
   <head>
       <meta charset="utf-8">
       <title>Medical Care - médecins</title>
-      <?php require('../view/style.html');  ?>
+      <?php require('../css/style.html');  ?>
 
   </head>
 
