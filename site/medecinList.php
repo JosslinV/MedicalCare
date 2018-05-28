@@ -12,6 +12,7 @@
       <main>
         <h1> Rechercher un Medecin : </h1>
         <?php require('../view/medecinTab.php'); ?>
+        <?php require('../view/newMedecin.php'); ?>
       </main>
   </body>
 </html>

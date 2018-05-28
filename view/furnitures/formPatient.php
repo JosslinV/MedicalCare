@@ -12,7 +12,7 @@
 		</div>
 	</div>
 
-	<!-- Text input-->
+	<!-- numéro SS-->
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="numSecu">N° SS</label>
 	  <div class="col-md-4">
@@ -21,7 +21,7 @@
 	  </div>
 	</div>
 
-	<!-- Button Drop Down -->
+	<!-- choix médecin traitant -->
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="médecinref">Médecin traitant</label>
 	  <div class="col-md-4">
@@ -43,7 +43,7 @@
 	  </div>
 	</div>
 
-	<!-- Button Drop Down -->
+	<!-- choix titre -->
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="buttondropdown">Civillité</label>
 	  <div class="col-md-2">
@@ -65,7 +65,7 @@
 	  </div>
 	</div>
 
-	<!-- Text input-->
+	<!-- nom-->
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="Nom du Patient">Nom</label>
 	  <div class="col-md-4">
@@ -74,7 +74,7 @@
 	  </div>
 	</div>
 
-	<!-- Text input-->
+	<!-- prénom-->
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="Prénom du Patient">Prénom</label>
 	  <div class="col-md-4">
@@ -83,7 +83,7 @@
 	  </div>
 	</div>
 
-	<!-- Text input-->
+	<!-- addresse -->
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="AdresseVoie1">Adresse</label>
 	  <div class="col-md-5">
@@ -92,7 +92,6 @@
 	  </div>
 	</div>
 
-	<!-- Text input-->
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="AdresseVoie2"></label>
 	  <div class="col-md-5">
@@ -101,7 +100,7 @@
 	  </div>
 	</div>
 
-	<!-- Text input-->
+	<!-- CP-->
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="cp">Code Postal</label>
 	  <div class="col-md-2">
@@ -110,7 +109,7 @@
 	  </div>
 	</div>
 
-	<!-- Text input-->
+	<!-- Ville-->
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="ville">Ville</label>
 	  <div class="col-md-4">
@@ -119,7 +118,7 @@
 	  </div>
 	</div>
 
-	<!-- Text input-->
+	<!-- DateNaissance-->
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="DateNaissance">Date de Naissance</label>
 	  <div class="col-md-4">
@@ -128,7 +127,7 @@
 	  </div>
 	</div>
 
-	<!-- Text input-->
+	<!-- villeNaissance-->
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="villeNaissance">Lieu de Naissance</label>
 	  <div class="col-md-4">
@@ -137,7 +136,7 @@
 	  </div>
 	</div>
 
-	<!-- Button -->
+	<!-- Ajouter -->
 	<div class="center-block">
 		<div class="col-md-4">
 		<button type="button" class="btn btn-success btn-lg btn-block">Ajouter le patient</button>
