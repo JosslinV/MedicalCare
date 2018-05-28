@@ -39,6 +39,8 @@ if(!empty($_POST["submit"])){
     </tr>
   <?php
   foreach($patients as $pat){
+    //conversion timestamp to string
+    $date = (date('d-m-Y',$pat["date_naissance"]));
   ?>
     <tr>
       <td><?php echo $pat["civilite"] ?></td>
@@ -47,7 +49,7 @@ if(!empty($_POST["submit"])){
       <td><?php echo $pat["adresse"] ?></td>
       <td><?php echo $pat["code_postal"] ?></td>
       <td><?php echo $pat["ville"] ?></td>
-      <td><?php echo $pat["date_naissance"] ?></td>
+      <td><?php echo $date ?></td>
       <td><?php echo $pat["lieu_naissance"] ?></td>
       <td><?php echo $pat["num_secu"] ?></td>
       <td><?php echo $pat["MedecinReferent"] ?></td>
