@@ -16,7 +16,7 @@ function requestPatientsSpecifique($pdo,$nom,$prenom){
   $patients = array();
 
   while ($data = $res->fetch()) {
-    if($nom == $data["nom"] || $prenom == $data["prenom"]){
+    if(strtoupper($nom) == strtoupper($data["nom"]) || strtoupper($prenom) == strtoupper($data["prenom"])){
       array_push($patients,$data);
     }
   }
