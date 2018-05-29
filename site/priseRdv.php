@@ -4,7 +4,7 @@
   <head>
       <meta charset="utf-8">
       <title>Medical Care - patient</title>
-      <?php require('../css/style.html');  ?>
+      <?php require('../css/style.php');  ?>
 
   </head>
 

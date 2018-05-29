@@ -1,0 +1,8 @@
+.scrollable {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 600px;
+  margin-bottom: 10px;
+  overflow: auto;
+}

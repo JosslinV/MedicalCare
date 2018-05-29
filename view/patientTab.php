@@ -21,9 +21,7 @@ if(!empty($_POST["submit"])){
     <input type="submit" name="submit" value="Rechercher">
   </form>
 
-
-  <h2> Liste des patients : </h2>
-
+  <div class="scrollable">
   <table class="table table-striped affTab">
     <thead class="thead-dark">
       <tr>
@@ -37,33 +35,41 @@ if(!empty($_POST["submit"])){
         <th>Lieu de naissance</th>
         <th>Num sécurité sociale</th>
         <th>Médecin traitant</th>
-        <th>Rendez-vous</th>
+        <th>Options</th>
       </tr>
     </thead>
+
   <?php
   foreach($patients as $pat){
     //conversion timestamp to string
     $date = (date('d-m-Y',$pat["date_naissance"]));
   ?>
-    <tbody>
-      <tr>
-        <td><?php echo $pat["civilite"] ?></td>
-        <td><?php echo $pat["nom"] ?></td>
-        <td><?php echo $pat["prenom"] ?></td>
-        <td><?php echo $pat["adresse"] ?></td>
-        <td><?php echo $pat["code_postal"] ?></td>
-        <td><?php echo $pat["ville"] ?></td>
-        <td><?php echo $date ?></td>
-        <td><?php echo $pat["lieu_naissance"] ?></td>
-        <td><?php echo $pat["num_secu"] ?></td>
-        <td><?php echo $pat["MedecinReferent"] ?></td>
-        <td>
-          <button onclick='location.href="../site/priseRdv.php?id=<?php echo $pat["idPatient"]?>"' type="button" class="btn btn-primary">
-            RDV
-          </button>
-        </td>
-      </tr>
-    </tbody>
+      <tbody>
+        <tr>
+          <td><?php echo $pat["civilite"] ?></td>
+          <td><?php echo $pat["nom"] ?></td>
+          <td><?php echo $pat["prenom"] ?></td>
+          <td><?php echo $pat["adresse"] ?></td>
+          <td><?php echo $pat["code_postal"] ?></td>
+          <td><?php echo $pat["ville"] ?></td>
+          <td><?php echo $date ?></td>
+          <td><?php echo $pat["lieu_naissance"] ?></td>
+          <td><?php echo $pat["num_secu"] ?></td>
+          <td><?php echo $pat["MedecinReferent"] ?></td>
+          <td>
+            <button onclick='location.href="../site/priseRdv.php?id=<?php echo $pat["idPatient"]?>"' type="button" class="btn btn-primary">
+               <img src="../view/media/calendar.png" alt="Calendar" height="20" width="20">
+            </button>
+            <button onclick='location.href="../site/modifier.php?id=<?php echo $pat["idPatient"]?>"' type="button" class="btn btn-success">
+               <img src="../view/media/edit.png" alt="edit" height="20" width="20">
+            </button>
+            <button onclick='location.href="../site/supprimer.php?id=<?php echo $pat["idPatient"]?>"' type="button" class="btn btn-danger">
+               <img src="../view/media/delete.png" alt="delete" height="20" width="20">
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </div>
 
   <?php
   }
