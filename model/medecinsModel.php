@@ -22,4 +22,16 @@ function requestMedecinSpecifique($pdo,$nom,$prenom){
   return $medecin;
 }
 
+function requestMedecinId($pdo,$id){
+  $res = $pdo->query('SELECT * FROM Medecin;');
+  $medecin = array();
+  while ($data = $res->fetch()) {
+    if($id == $data["idMedecin"]){
+      array_push($medecin,$data);
+    }
+  }
+  return $medecin;
+}
+
+
 ?>

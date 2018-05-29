@@ -1,6 +1,7 @@
 
-<?php require('../model/patientsModel.php');
-
+<?php
+require('../model/patientsModel.php');
+require('../model/medecinsModel.php');
 if(!isset($_POST["submit"])){
   $patients = requestPatients($linkpdo);
 }
@@ -11,7 +12,8 @@ if(!empty($_POST["submit"])){
     $patients = requestPatients($linkpdo);
     echo '<h3>Recherche incorrecte</h3>';
   }
-}?>
+}
+?>
 <main>
   <form action="./patientList.php" method="post">
     Nom:
@@ -43,6 +45,17 @@ if(!empty($_POST["submit"])){
   foreach($patients as $pat){
     //conversion timestamp to string
     $date = (date('d-m-Y',$pat["date_naissance"]));
+
+    //conversion du medecin par son id
+    $medecins = requestMedecinId($linkpdo, $pat["MedecinReferent"]);
+      foreach($medecins as $med){
+        $nomMed = $med['nom'];
+        $prenomMed = $med['prenom'];
+      }
+      if(!isset($nomMed) && !isset($prenomMed)){
+        $nomMed = '';
+        $prenomMed = '';
+      }
   ?>
       <tbody>
         <tr>
@@ -55,7 +68,7 @@ if(!empty($_POST["submit"])){
           <td><?php echo $date ?></td>
           <td><?php echo $pat["lieu_naissance"] ?></td>
           <td><?php echo $pat["num_secu"] ?></td>
-          <td><?php echo $pat["MedecinReferent"] ?></td>
+          <td><?php echo $nomMed.' '.$prenomMed ?></td>
           <td>
             <button onclick='location.href="../site/priseRdv.php?id=<?php echo $pat["idPatient"]?>"' type="button" class="btn btn-primary">
                <img src="../view/media/calendar.png" alt="Calendar" height="20" width="20">
@@ -72,6 +85,8 @@ if(!empty($_POST["submit"])){
     </div>
 
   <?php
+  $nomMed='';
+  $prenomMed='';
   }
   ?>
   </table>

@@ -1,3 +1,6 @@
+<?php
+$medecins = requestMedecin($linkpdo);
+?>
 <link rel="stylesheet" type="text/css" href="../css/form.css">
 <form id="newPatient" class="form-horizontal" method="post" action="../database/insertPatient.php">
 	<fieldset>
@@ -23,46 +26,27 @@
 
 	<!-- choix médecin traitant -->
 	<div class="form-group">
-	  <label class="col-md-4 control-label" for="médecinref">Médecin traitant</label>
-	  <div class="col-md-4">
-	    <div class="input-group">
-	      <input id="médecinref" name="MedecinReferent" class="form-control" placeholder="médecin traitant" type="text">
-	      <div class="input-group-btn">
-	        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-
-	          <span class="caret"></span>
-	        </button>
-	        <ul class="dropdown-menu pull-right">
-	          <li><a href="#">M. Rodriguez</a></li>
-	          <li><a href="#">M. Saussine</a></li>
-	          <li><a href="#">...</a></li>
-	          <li><a href="#">Option three</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </div>
+		<label class="col-md-4 control-label" for="medecinReferent">Médecin référent</label>
+		<div class="col-md-4">
+			<select class="form-control" name="medecinReferent" id="Medecin référent">
+				<option></option>
+				<?php foreach($medecins as $med){?>
+				<option><?php echo ($med['nom'].' '.$med['prenom']);?></option>
+				<?php }?>
+			</select>
+		</div>
 	</div>
 
 	<!-- choix titre -->
 	<div class="form-group">
-	  <label class="col-md-4 control-label" for="buttondropdown">Civillité</label>
-	  <div class="col-md-2">
-	    <div class="input-group">
-	      <input id="buttondropdown" name="civilite" class="form-control" placeholder="M." type="text">
-	      <div class="input-group-btn">
-	        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-
-	          <span class="caret"></span>
-	        </button>
-	        <ul class="dropdown-menu pull-right">
-	          <li><a href="#">M.</a></li>
-	          <li><a href="#">Mme.</a></li>
-	          <li><a href="#">Melle</a></li>
-	          <li><a href="#">Option three</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </div>
+		<label class="col-md-4 control-label" for="civilite">civilite</label>
+		<div class="col-md-4">
+			<select class="form-control" name="civilite" id="Civilité">
+				<option>M</option>
+				<option>Mme</option>
+				<option>Mlle</option>
+			</select>
+		</div>
 	</div>
 
 	<!-- nom-->
