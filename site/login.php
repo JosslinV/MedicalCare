@@ -1,11 +1,3 @@
-<?php
-if($_POST["login"] == "docteur" && $_POST["mdp"] == "strange"){
-  echo "mot de passe ok";
-}else {
-  echo "mauvais mot de passe";
-}
- ?>
-
 
 <!doctype html>
 <html>
@@ -17,9 +9,9 @@ if($_POST["login"] == "docteur" && $_POST["mdp"] == "strange"){
 
   <body>
       <main>
-        <h1> Bienvenue chez Medical Care ! </h1>
+        <h1> Bienvenue sur Medical Care ! </h1>
 
-        <?php require('../view/formlogin.php'); ?>
+        <?php require('../view/furnitures/formlogin.php'); ?>
       </main>
   </body>
 </html>
