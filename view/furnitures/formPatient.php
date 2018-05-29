@@ -106,7 +106,7 @@ $medecins = requestMedecin($linkpdo);
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="DateNaissance">Date de Naissance</label>
 	  <div class="col-md-4">
-	  <input id="DateNaissance" name="date_naissance" placeholder="XX/XX/XXXX" class="form-control input-md" type="text">
+	  <input id="DateNaissance" name="date_naissance" placeholder="XX/XX/XXXX" class="form-control input-md" required="" type="text">
 
 	  </div>
 	</div>
