@@ -8,7 +8,7 @@ $user = requestUser($_POST['login'],$linkpdo);
 if($_POST['login'] === $user['login'] && sha1($_POST['mdp']) === $user['mdp']){
   $_SESSION['authentifie'] = true;
   $_SESSION['login'] = $login;
-  header('location: ../site/medecinList.php');
+  header('location: ../site/patientList.php');
 } else {
   header('location: ../site/login.php');
 }
