@@ -24,21 +24,24 @@ if(!empty($_POST["submit"])){
 
   <h2> Liste des medecins : </h2>
 
-  <table class="table">
-    <tr>
-      <th>Civilité</th>
-      <th>Nom</th>
-      <th>Prénom</th>
-    </tr>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Civilité</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+      </tr>
+    </thead>
   <?php
   foreach($patients as $pat){
   ?>
-    <tr>
-      <td><?php echo $pat["civilite"] ?></td>
-      <td><?php echo $pat["nom"] ?></td>
-      <td><?php echo $pat["prenom"] ?></td>
-    </tr>
-
+    <tbody>
+      <tr>
+        <td><?php echo $pat["civilite"] ?></td>
+        <td><?php echo $pat["nom"] ?></td>
+        <td><?php echo $pat["prenom"] ?></td>
+      </tr>
+    </tbody>
   <?php
   }
   ?>
