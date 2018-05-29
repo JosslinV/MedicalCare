@@ -1,13 +1,13 @@
 <?php require('../model/medecinsModel.php');
 
 if(!isset($_POST["submit"])){
-  $patients = requestMedecin($linkpdo);
+  $medecins = requestMedecin($linkpdo);
 }
 if(!empty($_POST["submit"])){
   if(!empty($_POST["nom"]) || !empty($_POST["prenom"])){
-    $patients = requestMedecinSpecifique($linkpdo,$_POST["nom"],$_POST["prenom"]);
+    $medecins = requestMedecinSpecifique($linkpdo,$_POST["nom"],$_POST["prenom"]);
   } else {
-    $patients = requestMedecin($linkpdo);
+    $medecins = requestMedecin($linkpdo);
     echo '<h3>Recherche incorrecte</h3>';
   }
 }?>
@@ -20,30 +20,36 @@ if(!empty($_POST["submit"])){
     <input type="submit" name="submit" value="Rechercher">
   </form>
 
-
-
-  <h2> Liste des medecins : </h2>
-
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Civilité</th>
-        <th>Nom</th>
-        <th>Prénom</th>
-      </tr>
-    </thead>
-  <?php
-  foreach($patients as $pat){
-  ?>
-    <tbody>
-      <tr>
-        <td><?php echo $pat["civilite"] ?></td>
-        <td><?php echo $pat["nom"] ?></td>
-        <td><?php echo $pat["prenom"] ?></td>
-      </tr>
-    </tbody>
-  <?php
-  }
-  ?>
-  </table>
+  <div class="scrollable">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Civilité</th>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>Options</th>
+        </tr>
+      </thead>
+    <?php
+    foreach($medecins as $med){
+    ?>
+      <tbody>
+        <tr>
+          <td><?php echo $med["civilite"] ?></td>
+          <td><?php echo $med["nom"] ?></td>
+          <td><?php echo $med["prenom"] ?></td>
+          <td>
+            <button onclick='location.href="../site/modifier.php?id=<?php echo $med["idMedecin"]?>"' type="button" class="btn btn-success">
+               <img src="../view/media/edit.png" alt="edit" height="20" width="20">
+            </button>
+            <button onclick='location.href="../site/supprimer.php?id=<?php echo $med["idMedecin"]?>"' type="button" class="btn btn-danger">
+               <img src="../view/media/delete.png" alt="delete" height="20" width="20">
+          </td>
+        </tr>
+      </tbody>
+    <?php
+    }
+    ?>
+    </table>
+  </div>
 </main>
