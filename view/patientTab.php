@@ -76,7 +76,7 @@ if(!empty($_POST["submit"])){
             <button onclick='location.href="../site/modifier.php?id=<?php echo $pat["idPatient"]?>"' type="button" class="btn btn-success">
                <img src="../view/media/edit.png" alt="edit" height="20" width="20">
             </button>
-            <button onclick='location.href="../site/supprimer.php?id=<?php echo $pat["idPatient"]?>"' type="button" class="btn btn-danger">
+            <button onclick='location.href="../functions/deletePatient.php?id=<?php echo $pat["idPatient"]?>"' type="button" class="btn btn-danger">
                <img src="../view/media/delete.png" alt="delete" height="20" width="20">
             </button>
           </td>
