@@ -23,4 +23,15 @@ function requestPatientsSpecifique($pdo,$nom,$prenom){
   return $patients;
 }
 
+function requestPatientsId($pdo,$id){
+  $res = $pdo->query('SELECT * FROM Patient;');
+  $patients = array();
+  while ($data = $res->fetch()) {
+    if($id == $data["idPatient"]){
+      array_push($patients,$data);
+    }
+  }
+  return $patients;
+}
+
 ?>
