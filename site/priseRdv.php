@@ -11,6 +11,7 @@
   <body>
       <?php require('../view/navBar.html'); ?>
       <main>
+        <?php require('../view/VConsultation.php'); ?>
         <?php echo($_GET['id']); ?>
     </main>
   </body>

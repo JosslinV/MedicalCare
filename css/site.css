@@ -55,8 +55,41 @@ a:hover {
   margin-right: 5px;
 }
 
-
 .right {
   float: right;
   margin-right: 15px;
+}
+
+.col2 {
+  margin-left: 20%;
+}
+
+.contentCard{
+  padding: 30px;
+}
+
+#Patientcard{
+  background-color: #ccdde0;
+  border: 3,5px;
+	border-radius: 15px;
+  width: 800px;
+  height: 272px;
+
+}
+#MedecinCard{
+  background-color: #ccdde0;
+  width: 300px;
+  height: 90px;
+  border: 3,5px;
+	border-radius: 15px;
+  margin-left: 20%;
+}
+#DateCard{
+  width: 300px;
+  height: 124px;
+  margin-left: 20%;
+  margin-top: 5%;
+  background-color: #ccdde0;
+  border: 3,5px;
+	border-radius: 15px;
 }
