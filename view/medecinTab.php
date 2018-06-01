@@ -39,7 +39,7 @@ if(!empty($_POST["submit"])){
           <td><?php echo $med["nom"] ?></td>
           <td><?php echo $med["prenom"] ?></td>
           <td>
-            <button onclick='location.href="../site/modifier.php?id=<?php echo $med["idMedecin"]?>"' type="button" class="btn btn-success">
+            <button onclick='location.href="../site/modificationMedecins.php?id=<?php echo $med["idMedecin"]?>"' type="button" class="btn btn-success">
                <img src="../view/media/edit.png" alt="edit" height="20" width="20">
             </button>
             <button onclick='location.href="../functions/deleteMedecin.php?id=<?php echo $med["idMedecin"]?>"' type="button" class="btn btn-danger">
