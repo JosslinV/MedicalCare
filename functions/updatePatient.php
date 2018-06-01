@@ -14,11 +14,6 @@ if($_POST['medecinReferent'] != ''){
   $idMedecin = 0;
 }
 
-
-
-
-print_r($_POST);
-
 //conversion string to timestamp
 $date = strtotime($_POST['date_naissance']);
 
@@ -30,7 +25,6 @@ $stmt = $linkpdo->prepare("UPDATE  Patient SET civilite = '".$_POST['civilite'].
 
 $stmt->execute();
 
-print_r($stmt);
 header('location: ../site/patientList.php');
 
 ?>
