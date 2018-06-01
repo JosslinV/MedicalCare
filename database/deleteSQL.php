@@ -1,4 +1,5 @@
 <?php
+
 function deletePatient($pdo,$id){
   $pdo->query('DELETE FROM Patient WHERE idPatient='.$id);
   echo("ok");

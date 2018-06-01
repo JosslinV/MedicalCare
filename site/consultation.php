@@ -1,4 +1,7 @@
 <!doctype html>
+
+<?php require('../functions/verifConnexion');?>
+
 <html>
   <head>
       <meta charset="utf-8">
