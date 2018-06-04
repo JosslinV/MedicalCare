@@ -48,7 +48,7 @@ foreach ($medecins as $med) {
 	<!-- Button -->
 	<div class="center-block">
 		<div class="col-md-4">
-		<button type="submit" class="btn btn-success btn-lg btn-block">Ajouter le médecin</button>
+		<button type="submit" class="btn btn-success btn-lg btn-block">Modifier médecin</button>
 
 		</div>
 	</div>

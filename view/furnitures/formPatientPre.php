@@ -126,7 +126,7 @@ foreach ($patients as $pat) {
 	<!-- Ajouter -->
 	<div class="center-block">
 		<div class="col-md-4">
-		<button type="submit" class="btn btn-success btn-lg btn-block">Ajouter le patient</button>
+		<button type="submit" class="btn btn-success btn-lg btn-block">Modifier patient</button>
 
 		</div>
 	</div>
