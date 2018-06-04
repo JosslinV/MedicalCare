@@ -1,6 +1,6 @@
 <!doctype html>
 
-<?php require('../functions/verifConnexion');?>
+<?php require('../functions/verifConnexion.php');?>
 
 <html>
   <head>
@@ -10,9 +10,10 @@
   </head>
 
   <body>
+      <?php require('../view/navBar.html'); ?>
       <main>
         <h1> Vos consultations </h1>
-        <?php require('../view/VConsultation.php'); ?>
+        <?php require('../view/rdvTab.php'); ?>
       </main>
   </body>
 </html>
