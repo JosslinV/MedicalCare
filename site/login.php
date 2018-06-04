@@ -5,12 +5,14 @@
       <meta charset="utf-8">
       <title>  Page de connection </title>
       <?php require('../css/style.php');  ?>
+      <link rel="stylesheet" type="text/css" href="../css/login.css">
   </head>
 
   <body>
       <main>
-        <h1> Bienvenue sur Medical Care ! </h1>
+        <img src="../view/media/logoNav.png" alt="Logo du site" />
         <?php require('../view/furnitures/formlogin.php'); ?>
+        
       </main>
   </body>
 </html>
