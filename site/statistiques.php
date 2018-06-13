@@ -11,7 +11,7 @@
   <body>
       <?php require('../view/navBar.html'); ?>
       <main>
-        <h1>Fonctionnalité à venir</h1>
+        <?php require('../functions/statisticView.php'); ?>
       </main>
   </body>
 </html>
