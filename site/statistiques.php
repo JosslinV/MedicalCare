@@ -11,7 +11,7 @@
   <body>
       <?php require('../view/navBar.html'); ?>
       <main>
-        <?php require('../functions/statisticView.php'); ?>
+        <?php require('../view/statisticPatient.php'); ?>
       </main>
   </body>
 </html>
