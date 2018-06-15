@@ -33,14 +33,20 @@ $rdv = requestRdv($linkpdo);
       $nomPat = $pat['nom'];
       $prenomPat = $pat['prenom'];
     }
+
+    //conversion timestamp to string
+    $date = (date('d-m-Y',$rendezVous['date']));
+    $heure = (date('H:i',$rendezVous["heure"]));
+    $duree = (date('H:i',$rendezVous["duree"]-3600));
+
   ?>
       <tbody>
         <tr>
           <td><?php echo $nomPat.' '.$prenomPat  ?></td>
           <td><?php echo $nomMed.' '.$prenomMed ?></td>
-          <td><?php echo $rendezVous['date'] ?></td>
-          <td><?php echo $rendezVous['heure'] ?></td>
-          <td><?php echo $rendezVous['duree'] ?></td>
+          <td><?php echo $date ?></td>
+          <td><?php echo $heure ?></td>
+          <td><?php echo $duree ?></td>
           <td>
             <button onclick='location.href="../site/modifier.php?id=<?php echo $pat["idPatient"]?>"' type="button" class="btn btn-success">
                <img src="../view/media/edit.png" alt="edit" height="20" width="20">
