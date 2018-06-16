@@ -48,9 +48,6 @@ $rdv = requestRdv($linkpdo);
           <td><?php echo $heure ?></td>
           <td><?php echo $duree ?></td>
           <td>
-            <button onclick='location.href="../site/modifier.php?id=<?php echo $pat["idPatient"]?>"' type="button" class="btn btn-success">
-               <img src="../view/media/edit.png" alt="edit" height="20" width="20">
-            </button>
             <button onclick='location.href="../functions/deleteRDV.php?id=<?php echo $rendezVous["idRendezVous"]?>"' type="button" class="btn btn-danger">
                <img src="../view/media/delete.png" alt="delete" height="20" width="20">
             </button>

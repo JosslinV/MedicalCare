@@ -18,11 +18,14 @@ $medecins = requestMedecin($linkpdo);
     <?php
     foreach($medecins as $med){
       echo '<tr><th>'.$med['nom'].' '.$med['prenom'].'</th>';
+
       $rdv = requestRdvMedecin($linkpdo,$med['idMedecin']);
       $horaire = 0;
       foreach($rdv as $rendezVous){
         $horaire += $rendezVous['duree'];
       }
+
+      // Conversion de l'horaire
       $horaire = (date('H:i',$horaire - 3600));
       echo '<td>'.$horaire.'</td></tr>';
     }
