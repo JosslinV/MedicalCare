@@ -12,6 +12,8 @@
       <?php require('../view/navBar.html'); ?>
       <main>
         <?php require('../view/statisticPatient.php'); ?>
+        <br/>
+        <?php require('../view/statisticMed.php'); ?>
       </main>
   </body>
 </html>

@@ -40,7 +40,7 @@ foreach($patients as $pat){
 <table class="table w-50 p-3" style="width: 50%; margin: auto;">
   <thead>
     <tr>
-      <th scope="col"></th>
+      <th scope="col"><h3>Patients</h3></th>
       <th scope="col">Femmes</th>
       <th scope="col">Hommes</th>
     </tr>
