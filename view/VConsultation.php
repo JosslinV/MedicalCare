@@ -1,7 +1,8 @@
 <?php
-require('../database/connexionBDD.php');
-require('../model/patientsModel.php');
-require('../model/medecinsModel.php');
+require('database/connexionBDD.php');
+require('database/connexionBDD.php');
+require('model/patientsModel.php');
+require('model/medecinsModel.php');
 $patients = requestPatientsId($linkpdo,$_GET['id']);
 foreach($patients as $pat){
   $pat = $pat;
@@ -10,7 +11,7 @@ foreach($patients as $pat){
 $medecins = requestMedecin($linkpdo);
 
 ?>
-<form method="post" action="../database/insertRDV.php?idPat=<?php echo $pat['idPatient'];?>">
+<form method="post" action="database/insertRDV.php?idPat=<?php echo $pat['idPatient'];?>">
   <ul>
     <li>
       <h3> Patient </h3>

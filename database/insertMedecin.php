@@ -13,5 +13,5 @@ $stmt->execute(array('civilite' => $_POST['civilite'],
                       'prenom' => $_POST['prenom']));
 
 
-header('location: ../site/medecinList.php');
+header('location: ../medecinList.php');
  ?>

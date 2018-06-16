@@ -1,4 +1,6 @@
-<?php require('../model/medecinsModel.php');
+<?php
+require('database/connexionBDD.php');
+require('model/medecinsModel.php');
 
 if(!isset($_POST["submit"])){
   $medecins = requestMedecin($linkpdo);
@@ -39,11 +41,11 @@ if(!empty($_POST["submit"])){
           <td><?php echo $med["nom"] ?></td>
           <td><?php echo $med["prenom"] ?></td>
           <td>
-            <button onclick='location.href="../site/modificationMedecins.php?id=<?php echo $med["idMedecin"]?>"' type="button" class="btn btn-success">
-               <img src="../view/media/edit.png" alt="edit" height="20" width="20">
+            <button onclick='location.href="modificationMedecins.php?id=<?php echo $med["idMedecin"]?>"' type="button" class="btn btn-success">
+               <img src="view/media/edit.png" alt="edit" height="20" width="20">
             </button>
-            <button onclick='location.href="../functions/deleteMedecin.php?id=<?php echo $med["idMedecin"]?>"' type="button" class="btn btn-danger">
-               <img src="../view/media/delete.png" alt="delete" height="20" width="20">
+            <button onclick='location.href="functions/deleteMedecin.php?id=<?php echo $med["idMedecin"]?>"' type="button" class="btn btn-danger">
+               <img src="view/media/delete.png" alt="delete" height="20" width="20">
           </td>
         </tr>
       </tbody>

@@ -1,4 +1,4 @@
-<button onclick="toggleForm()" class="btn btn-success btn-md "  >Ajouter un médecin</button>
+<button onclick="toggleForm()" class="btn btn-success btn-md ">Ajouter un médecin</button>
 
 <?php require('furnitures/formMedecins.php')?>
 

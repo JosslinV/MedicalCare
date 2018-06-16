@@ -1,5 +1,5 @@
-<link rel="stylesheet" type="text/css" href="../css/form.css">
-<form id="newMedecin" class="form-horizontal" method="post" action="../database/insertMedecin.php">
+<link rel="stylesheet" type="text/css" href="css/form.css">
+<form id="newMedecin" class="form-horizontal" method="post" action="database/insertMedecin.php">
 	<fieldset>
 
 	<!-- Form Name -->
@@ -23,7 +23,7 @@
 			</select>
 		</div>
 	</div>
-	
+
 	<!-- Nom-->
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="Nom du médecin">Nom</label>

@@ -3,5 +3,5 @@ session_start();
 
 session_destroy();
 echo("ok");
-header('location:../site/login.php');
+header('location: ../index.php');
 ?>

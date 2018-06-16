@@ -1,6 +1,7 @@
 <?php
-require('../model/patientsModel.php');
-require('../database/connexionBDD.php');
+require('database/connexionBDD.php');
+require('model/patientsModel.php');
+require('database/connexionBDD.php');
 
 $patients = requestPatients($linkpdo);
 $h25 = $h2550 = $h50 = $f25 = $f2550 = $f50 = 0;

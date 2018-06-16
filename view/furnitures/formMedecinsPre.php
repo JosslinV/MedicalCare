@@ -1,6 +1,6 @@
 <?php
-require('../model/medecinsModel.php');
-require('../database/connexionBDD.php');
+require('model/medecinsModel.php');
+require('database/connexionBDD.php');
 
 $medecins = requestMedecinId($linkpdo,$_GET['id']);
 
@@ -10,7 +10,7 @@ foreach ($medecins as $med) {
 
 ?>
 
-<form class="form-horizontal" method="post" action="../functions/updateMedecin.php?id=<?php echo $_GET['id'];?>">
+<form class="form-horizontal" method="post" action="functions/updateMedecin.php?id=<?php echo $_GET['id'];?>">
 	<fieldset>
 
 	<!-- Form Name -->

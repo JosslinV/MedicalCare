@@ -1,8 +1,8 @@
 <?php
 $medecins = requestMedecin($linkpdo);
 ?>
-<link rel="stylesheet" type="text/css" href="../css/form.css">
-<form id="newPatient" class="form-horizontal" method="post" action="../database/insertPatient.php">
+<link rel="stylesheet" type="text/css" href="css/form.css">
+<form id="newPatient" class="form-horizontal" method="post" action="database/insertPatient.php">
 	<fieldset>
 
 	<!-- Form Name -->

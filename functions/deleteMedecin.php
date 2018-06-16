@@ -4,5 +4,5 @@ require('../database/deleteSQL.php');
 
 deleteMedecin($linkpdo, $_GET['id']);
 
-header('location: ../site/medecinList.php');
+header('location: ../medecinList.php');
  ?>

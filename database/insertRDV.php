@@ -35,9 +35,10 @@ if(verificationInsertion($rdv,$heure,$duree)){
                         'duree' => $duree,
                         'Patient_idPatient' => $patients['idPatient'],
                         'Medecin_idMedecin' =>  $medecins['idMedecin']));
-  header('Location: ../site/patientList.php');
+  header('Location: ../patientList.php');
 } else {
-  header('Location: ../site/priseRdv.php?id='.$patients['idPatient']);
+  echo '<script type="text/javascript">alert(Veuillez sélectionner un autre horaire.);</script>';
+  header('Location: ../priseRdv.php?id='.$patients['idPatient']);
 }
 
 function verificationInsertion($rdv,$heureInsert,$dureeInsert){

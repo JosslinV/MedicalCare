@@ -10,8 +10,6 @@ foreach ($medecins as $med) {
   $idMedecin = $med['idMedecin'];
 }
 
-
-
 $pdo = $linkpdo;
 $stmt = $pdo->prepare("INSERT into Patient (idPatient, civilite, nom, prenom, adresse, code_postal, ville, date_naissance, lieu_naissance, num_secu, MedecinReferent)
 VALUES (default, :civilite, :nom, :prenom, :adresse, :code_postal, :ville, :date_naissance, :lieu_naissance, :num_secu, :medecinReferent)");
@@ -30,5 +28,5 @@ $stmt->execute(array('civilite' => $_POST['civilite'],
                       'num_secu' => $_POST['num_secu'],
                       'medecinReferent' =>  $idMedecin));
 
-header('location: ../site/patientList.php');
+header('location: ../patientList.php');
  ?>

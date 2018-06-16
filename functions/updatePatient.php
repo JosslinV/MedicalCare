@@ -23,8 +23,10 @@ $stmt = $linkpdo->prepare("UPDATE  Patient SET civilite = '".$_POST['civilite'].
                                                lieu_naissance='".$_POST['lieu_naissance']."', num_secu='".$_POST['num_secu']."', MedecinReferent='".$idMedecin."'
                                                WHERE idPatient=".$_GET['id'].";");
 
+
+
 $stmt->execute();
 
-header('location: ../site/patientList.php');
+header('location: ../patientList.php');
 
 ?>

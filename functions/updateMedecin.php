@@ -9,6 +9,6 @@ $stmt = $linkpdo->prepare("UPDATE  Medecin SET civilite = '".$_POST['civilite'].
 
 $stmt->execute();
 
-header('location: ../site/medecinList.php');
+header('location: ../medecinList.php');
 
 ?>

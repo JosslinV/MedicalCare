@@ -6,7 +6,7 @@
                     <h3 class="panel-title">Bienvenue sur Medical Care</h3>
                 </div>
                 <div class="panel-body">
-                    <form role="form" method="post" action="../functions/session.php">
+                    <form role="form" method="post" action="functions/session.php">
                         <fieldset>
                             <div class="form-group">
                                 <input class="form-control" placeholder="Login" name="login" type="text" autofocus>

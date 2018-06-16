@@ -1,7 +1,8 @@
 <?php
-require('../model/medecinsModel.php');
-require('../model/rdvModel.php');
-require('../database/connexionBDD.php');
+require('database/connexionBDD.php');
+require('model/medecinsModel.php');
+require('model/rdvModel.php');
+require('database/connexionBDD.php');
 
 
 $medecins = requestMedecin($linkpdo);

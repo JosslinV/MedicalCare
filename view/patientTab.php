@@ -1,7 +1,7 @@
-
 <?php
-require('../model/patientsModel.php');
-require('../model/medecinsModel.php');
+require('database/connexionBDD.php');
+require('model/patientsModel.php');
+require('model/medecinsModel.php');
 if(!isset($_POST["submit"])){
   $patients = requestPatients($linkpdo);
 }
@@ -70,14 +70,14 @@ if(!empty($_POST["submit"])){
           <td><?php echo $pat["num_secu"] ?></td>
           <td><?php echo $nomMed.' '.$prenomMed ?></td>
           <td>
-            <button onclick='location.href="../site/priseRdv.php?id=<?php echo $pat["idPatient"]?>"' type="button" class="btn btn-primary">
-               <img src="../view/media/calendar.png" alt="Calendar" height="20" width="20">
+            <button onclick='location.href="priseRdv.php?id=<?php echo $pat["idPatient"]?>"' type="button" class="btn btn-primary">
+               <img src="view/media/calendar.png" alt="Calendar" height="20" width="20">
             </button>
-            <button onclick='location.href="../site/modificationPatients.php?id=<?php echo $pat["idPatient"]?>"' type="button" class="btn btn-success">
-               <img src="../view/media/edit.png" alt="edit" height="20" width="20">
+            <button onclick='location.href="modificationPatients.php?id=<?php echo $pat["idPatient"]?>"' type="button" class="btn btn-success">
+               <img src="view/media/edit.png" alt="edit" height="20" width="20">
             </button>
-            <button onclick='location.href="../functions/deletePatient.php?id=<?php echo $pat["idPatient"]?>"' type="button" class="btn btn-danger">
-               <img src="../view/media/delete.png" alt="delete" height="20" width="20">
+            <button onclick='location.href="functions/deletePatient.php?id=<?php echo $pat["idPatient"]?>"' type="button" class="btn btn-danger">
+               <img src="view/media/delete.png" alt="delete" height="20" width="20">
             </button>
           </td>
         </tr>

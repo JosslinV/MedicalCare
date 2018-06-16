@@ -1,6 +1,4 @@
 <?php
-//connexion à la bdd
-require('../database/connexionBDD.php');
 
 function requestMedecin($pdo){
   $res = $pdo->query('SELECT * FROM Medecin');
