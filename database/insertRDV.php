@@ -2,6 +2,7 @@
 require('../database/connexionBDD.php');
 require('../model/patientsModel.php');
 require('../model/medecinsModel.php');
+require('../model/rdvModel.php');
 
 $patients = requestPatientsId($linkpdo,$_GET['idPat']);
 foreach($patients as $pat){
@@ -25,10 +26,38 @@ $pdo = $linkpdo;
 $stmt = $pdo->prepare("INSERT into RendezVous (idRendezVous, date, heure, duree, Patient_idPatient, Medecin_idMedecin)
 VALUES (default, :date, :heure, :duree, :Patient_idPatient, :Medecin_idMedecin)");
 
-$stmt->execute(array('date' => $date,
-                      'heure' => $heure,
-                      'duree' => $duree,
-                      'Patient_idPatient' => $patients['idPatient'],
-                      'Medecin_idMedecin' =>  $medecins['idMedecin']));
 
+$rdv = requestRdvMedecin($pdo,$medecins['idMedecin']);
+
+if(verificationInsertion($rdv,$heure,$duree)){
+  $stmt->execute(array('date' => $date,
+                        'heure' => $heure,
+                        'duree' => $duree,
+                        'Patient_idPatient' => $patients['idPatient'],
+                        'Medecin_idMedecin' =>  $medecins['idMedecin']));
+  header('Location: ../site/patientList.php');
+} else {
+  header('Location: ../site/priseRdv.php?id='.$patients['idPatient']);
+}
+
+function verificationInsertion($rdv,$heureInsert,$dureeInsert){
+  foreach($rdv as $rendezVous){
+    if(!chevauchement($rendezVous['heure'],$rendezVous['duree'],$heureInsert,$dureeInsert)){
+      return false;
+    }
+  }
+  return true;
+}
+
+// Vérification de chevauchement
+// Ne fonctionne qu'avec les timestamp UNIX
+function chevauchement($heure1, $duree1, $heure2, $duree2){
+  $creneau1 = $heure1 + $duree1;
+  $creneau2 = $heure2 + $duree2;
+  if($heure1 >= $creneau2 || $creneau1 <= $heure2){
+    return true;
+  } else {
+    return false;
+  }
+}
  ?>
